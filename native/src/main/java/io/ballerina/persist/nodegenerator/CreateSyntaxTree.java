@@ -34,7 +34,6 @@ import io.ballerina.tools.text.TextDocument;
 import io.ballerina.tools.text.TextDocuments;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -49,7 +48,7 @@ import static io.ballerina.persist.PersistToolsConstants.DEFAULT_USER;
  * Class to create syntax tree for Config.toml.
  */
 public class CreateSyntaxTree {
-    private static final PrintStream outStream = System.out;
+
     private static String[] nodeMap = {"host", "port", "user", "database", "password"};
     private static String[] defaultValues = {"localhost", "3306", "root", "", ""};
 

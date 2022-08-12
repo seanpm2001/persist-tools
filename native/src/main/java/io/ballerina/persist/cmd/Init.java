@@ -26,8 +26,6 @@ import io.ballerina.projects.directory.ProjectLoader;
 import io.ballerina.toml.syntax.tree.SyntaxTree;
 import org.ballerinalang.formatter.core.Formatter;
 import org.ballerinalang.formatter.core.FormatterException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import picocli.CommandLine;
 
 import java.io.IOException;
@@ -47,8 +45,7 @@ import java.nio.file.Paths;
         description = "generate database configurations.")
 
 public class Init implements BLauncherCmd {
-    private static final Logger LOG = LoggerFactory.getLogger(PersistCmd.class);
-    private final PrintStream outStream = System.out;
+
     private final PrintStream errStream = System.err;
     private String sourcePath = "";
     private ProjectEnvironmentBuilder projectEnvironmentBuilder;
